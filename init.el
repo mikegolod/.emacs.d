@@ -8,19 +8,28 @@
 ;; Install use-package
 (package-install 'use-package t)
 
-;; Core editor
+;;;;;;;;;;;;;;;;;
+;; Core editor ;;
+;;;;;;;;;;;;;;;;;
+
 ;; Tabs
 (setq-default indent-tab-mode nil)
 (setq-default tab-width 8)
 (setq tab-always-indent 'complete)
 
-;; Packages 
+;;;;;;;;;;;;;;
+;; Packages ;;
+;;;;;;;;;;;;;;
+
 (use-package magit
   :ensure t
   :bind ("C-x g" . magit-status)
   :config
   (add-to-list 'magit-repository-directories '("~" . 3)))
 
+(use-package git-gutter :ensure t
+  :config
+  (git-gutter:linum-setup))
 
 (use-package editorconfig
   :ensure t
@@ -62,12 +71,20 @@
   :ensure t
   :mode ("\\.js\\'" . js2-mode)
   :interpreter ("node" . js2-mode)
-  :config (add-hook 'js2-mode-hook 'prettier-js-mode))
+  :config
+  (add-hook 'js2-mode-hook 'prettier-js-mode))
 
 (use-package less-css-mode :ensure t)
 
 (use-package npm-mode :ensure t
   :mode ("package\\.json"))
+
+;;;;;;;;;;;;;;;;;
+;; Programming ;;
+;;;;;;;;;;;;;;;;;
+
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'git-gutter-mode)
 
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
