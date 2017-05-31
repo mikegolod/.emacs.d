@@ -79,7 +79,8 @@
 (use-package npm-mode :ensure t
   :mode ("package\\.json"))
 
-(use-package centered-window-mode :ensure t)
+(use-package centered-window-mode :ensure t
+  :bind ("C-c c" . centered-window-mode))
 
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
