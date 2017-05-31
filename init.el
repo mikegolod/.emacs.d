@@ -88,6 +88,7 @@
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'git-gutter-mode)
+(add-hook 'prog-mode-hook 'hl-line-mode)
 
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
