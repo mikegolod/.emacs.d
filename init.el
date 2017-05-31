@@ -21,6 +21,7 @@
   :config
   (add-to-list 'magit-repository-directories '("~" . 3)))
 
+
 (use-package editorconfig
   :ensure t
   :config (editorconfig-mode t))
@@ -64,6 +65,9 @@
   :config (add-hook 'js2-mode-hook 'prettier-js-mode))
 
 (use-package less-css-mode :ensure t)
+
+(use-package npm-mode :ensure t
+  :mode ("package\\.json"))
 
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
