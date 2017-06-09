@@ -90,7 +90,7 @@
   :config
   (setq prettier-js-args '("--trailing-comma" "es5"
 			   "--single-quote" "true"
-			   "--max-width" "120"
+			   "--print-width" "120"
 			   )))
 
 (use-package js2-mode
