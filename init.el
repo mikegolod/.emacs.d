@@ -5,8 +5,11 @@
 (package-initialize)
 (push "~/.emacs.d/vendor" load-path)
 
-;; Install use-package
-(package-install 'use-package t)
+;; Ensure use-package is installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package t))
+(require 'use-package)
 
 ;;;;;;;;;;;;;;;;;
 ;; Core editor ;;
