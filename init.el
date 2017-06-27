@@ -15,6 +15,9 @@
 ;; Core editor ;;
 ;;;;;;;;;;;;;;;;;
 
+;; Time locale
+(setq-default system-time-locale "C")
+
 ;; Tabs
 (setq-default indent-tab-mode nil)
 (setq-default tab-width 8)
