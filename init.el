@@ -118,7 +118,8 @@
 (use-package centered-window-mode :ensure t
   :bind ("C-c c" . centered-window-mode))
 
-(use-package monokai-theme :ensure t :config (load-theme 'monokai t))
+(if (display-graphic-p)
+    (use-package monokai-theme :ensure t :config (load-theme 'monokai t)))
 
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
