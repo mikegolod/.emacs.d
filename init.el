@@ -104,7 +104,7 @@
   :mode ("\\.js\\'" . js2-mode)
   :interpreter ("node" . js2-mode)
   :init
-  (add-hook 'js2-mode-hook 'prettier-js-mode)
+  ;;(add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'js2-mode-hook 'flycheck-mode)
   :config
   (setq js2-mode-show-parse-errors nil)
