@@ -123,6 +123,8 @@
 
 (use-package php-mode :ensure t)
 
+(use-package restclient :ensure t)
+
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
