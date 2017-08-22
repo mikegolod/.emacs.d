@@ -125,6 +125,8 @@
 
 (use-package restclient :ensure t)
 
+(use-package yaml-mode :ensure t)
+
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
