@@ -127,6 +127,14 @@
 
 (use-package yaml-mode :ensure t)
 
+;;;;;;;;;;;;
+;; Docker ;;
+;;;;;;;;;;;;
+
+(use-package docker :ensure t)
+
+(use-package docker-mode :ensure t)
+
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
