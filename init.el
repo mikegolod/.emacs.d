@@ -133,7 +133,7 @@
 
 (use-package docker :ensure t)
 
-(use-package docker-mode :ensure t)
+(use-package dockerfile-mode :ensure t)
 
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
