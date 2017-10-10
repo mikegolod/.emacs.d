@@ -145,6 +145,12 @@
 (add-hook 'prog-mode-hook 'git-gutter-mode)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 
+;;;;;;;;;;;;;;;;
+;; Dired mode ;;
+;;;;;;;;;;;;;;;;
+
+(setq dired-listing-switches "-alh")
+
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
