@@ -1,5 +1,5 @@
 /custom.el
-elpa/
+/elpa/
 /projectile-bookmarks.eld
 /url/
 /eshell/
@@ -9,3 +9,4 @@ elpa/
 /recentf
 /tramp
 /tutorial/
+/server/
