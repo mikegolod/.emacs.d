@@ -123,6 +123,13 @@
 
 (use-package php-mode :ensure t)
 
+(use-package phpcbf :ensure t
+  :init
+  (add-hook 'php-mode-hook 'phpcbf-enable-on-save)
+  :config
+  (setq phpcbf-standard "PSR2")
+)
+
 (use-package restclient :ensure t)
 
 (use-package yaml-mode :ensure t)
