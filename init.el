@@ -162,6 +162,8 @@
 
 (setq dired-listing-switches "-alh")
 
+(use-package dired+ :ensure t)
+
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
