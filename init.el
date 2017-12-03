@@ -148,6 +148,8 @@
 
 (use-package docker-compose-mode :ensure t)
 
+(use-package apache-mode :ensure t)
+
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
