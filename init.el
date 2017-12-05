@@ -9,7 +9,8 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package t))
-(require 'use-package)
+(eval-when-compile (require 'use-package))
+(require 'bind-key)
 
 ;;;;;;;;;;;;;;;;;
 ;; Core editor ;;
