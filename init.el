@@ -24,6 +24,11 @@
 (setq-default tab-width 8)
 (setq tab-always-indent 'complete)
 
+;; Swap meta & super for darwin
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'super))
+
 ;;;;;;;;;;;;;;
 ;; Packages ;;
 ;;;;;;;;;;;;;;
