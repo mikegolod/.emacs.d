@@ -156,6 +156,15 @@
 
 (use-package apache-mode :ensure t)
 
+;;;;;;;;;;;;;;;;;;
+;; Company mode ;;
+;;;;;;;;;;;;;;;;;;
+
+(use-package company :ensure t
+  :bind ("M-/" . 'company-complete)
+  :init
+  (add-hook 'after-init-hook 'global-company-mode))
+
 ;;;;;;;;;;;;;;;;;
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
