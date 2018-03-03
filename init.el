@@ -121,7 +121,7 @@
 (use-package npm-mode :ensure t
   :mode ("package\\.json"))
 
-(use-package centered-window-mode :ensure t
+(use-package centered-window :ensure t
   :bind ("C-c c" . centered-window-mode))
 
 (if (display-graphic-p)
@@ -179,7 +179,7 @@
 
 (setq dired-listing-switches "-alh")
 
-(use-package dired+ :ensure t)
+(use-package dired+)
 
 ;; Tell custom where to store it's stuff
 (setq custom-file "~/.emacs.d/custom.el")
