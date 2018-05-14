@@ -144,6 +144,10 @@
 
 (use-package markdown-mode+ :ensure t)
 
+(use-package cider :ensure t)
+
+(use-package typescript-mode :ensure t)
+
 ;;;;;;;;;;;;
 ;; Docker ;;
 ;;;;;;;;;;;;
