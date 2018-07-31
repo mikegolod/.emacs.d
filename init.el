@@ -33,6 +33,21 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
 
+;;;;;;;;;;;;;;;;;
+;; Programming ;;
+;;;;;;;;;;;;;;;;;
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'hl-line-mode)
+
+(use-package git-gutter :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'git-gutter-mode)
+  (setq git-gutter:added-sign "++")
+  (setq git-gutter:modified-sign "==")
+  (setq git-gutter:deleted-sign "--")
+  (setq git-gutter:visual-line t))
+
 ;;;;;;;;;;;;;;
 ;; Packages ;;
 ;;;;;;;;;;;;;;
@@ -44,10 +59,6 @@
   :bind ("C-x g" . magit-status)
   :config
   (add-to-list 'magit-repository-directories '("~" . 3)))
-
-(use-package git-gutter :ensure t
-  :config
-  (git-gutter:linum-setup))
 
 (use-package editorconfig
   :ensure t
@@ -176,14 +187,6 @@
   :bind ("M-/" . 'company-complete)
   :init
   (add-hook 'after-init-hook 'global-company-mode))
-
-;;;;;;;;;;;;;;;;;
-;; Programming ;;
-;;;;;;;;;;;;;;;;;
-
-;;(add-hook 'prog-mode-hook 'linum-mode)
-(add-hook 'prog-mode-hook 'git-gutter-mode)
-(add-hook 'prog-mode-hook 'hl-line-mode)
 
 ;;;;;;;;;;;;;;;;
 ;; Dired mode ;;
