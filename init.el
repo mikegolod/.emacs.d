@@ -5,6 +5,10 @@
 (package-initialize)
 (push "~/.emacs.d/vendor" load-path)
 
+;; Tell custom where to store it's stuff
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file t)
+
 ;; Ensure use-package is installed
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -52,7 +56,7 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-global-mode t))
+  (projectile-mode t))
 
 (use-package helm
   :ensure t
@@ -85,7 +89,7 @@
       (setq-local flycheck-javascript-eslint-executable eslint))))
 
 (use-package flycheck :ensure t
-  :init (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules))
+  :init (global-flycheck-mode))
 
 (use-package flycheck-flow :ensure t
   :config
@@ -136,6 +140,10 @@
   (setq phpcbf-standard "PSR2")
 )
 
+(use-package go-mode :ensure t)
+
+(use-package company-go :ensure t)
+
 (use-package restclient :ensure t)
 
 (use-package yaml-mode :ensure t)
@@ -173,7 +181,7 @@
 ;; Programming ;;
 ;;;;;;;;;;;;;;;;;
 
-(add-hook 'prog-mode-hook 'linum-mode)
+;;(add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'git-gutter-mode)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 
@@ -184,7 +192,3 @@
 (setq dired-listing-switches "-alh")
 
 (use-package dired+)
-
-;; Tell custom where to store it's stuff
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file t)
