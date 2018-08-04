@@ -151,9 +151,19 @@
   (setq phpcbf-standard "PSR2")
 )
 
-(use-package go-mode :ensure t)
+(use-package go-mode :ensure t
+  :config
+  (add-hook 'go-mode-hook (lambda () (add-hook (make-local-variable 'before-save-hook) 'gofmt-before-save)))
+)
 
-(use-package company-go :ensure t)
+(use-package company-go :ensure t
+  :config
+  (add-hook 'go-mode-hook (lambda () (add-to-list 'company-backends 'company-go)))
+  )
+
+(use-package go-eldoc :ensure t
+  :config
+  (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 (use-package restclient :ensure t)
 
