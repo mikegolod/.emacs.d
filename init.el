@@ -141,7 +141,7 @@
   :bind ("C-c c" . centered-window-mode))
 
 (if (display-graphic-p)
-    (use-package monokai-theme :ensure t :config (load-theme 'monokai t)))
+    (use-package dracula-theme :ensure t :config (load-theme 'dracula t)))
 
 (use-package php-mode :ensure t)
 
