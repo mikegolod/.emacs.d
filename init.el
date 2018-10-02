@@ -166,6 +166,8 @@
   :config
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
+(use-package kotlin-mode :ensure t)
+
 (use-package restclient :ensure t)
 
 (use-package yaml-mode :ensure t)
