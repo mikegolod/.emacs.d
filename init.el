@@ -166,7 +166,10 @@
   :config
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
-(use-package kotlin-mode :ensure t)
+(use-package kotlin-mode :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.kts" . kotlin-mode))
+  (setq kotlin-tab-width 4))
 
 (use-package restclient :ensure t)
 
