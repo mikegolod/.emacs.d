@@ -171,6 +171,8 @@
   (add-to-list 'auto-mode-alist '("\\.kts" . kotlin-mode))
   (setq kotlin-tab-width 4))
 
+(use-package crystal-mode :ensure t)
+
 (use-package restclient :ensure t)
 
 (use-package yaml-mode :ensure t)
